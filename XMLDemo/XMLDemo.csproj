@@ -57,15 +57,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\借阅记录.xml" />
-    <Content Include="Data\图书.xml" />
-    <Content Include="Data\读者.xml" />
+    <Content Include="Data\Records.xml" />
+    <Content Include="Data\Books.xml" />
+    <Content Include="Data\Readers.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\Books.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Readers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Records.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

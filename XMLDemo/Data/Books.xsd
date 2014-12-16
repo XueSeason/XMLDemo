@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Books"
+    targetNamespace="http://tempuri.org/Books.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Books.xsd"
+    xmlns:mstns="http://tempuri.org/Books.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <!--创建简单类型开始-->
+  <xs:simpleType name="TitleType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AuthorType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SeriesType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IT类" />
+      <xs:enumeration value="人文类" />
+      <xs:enumeration value="社科类" />
+      <xs:enumeration value="艺术类" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PublisherType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PublishYearType">
+    <xs:restriction base="xs:date">
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PriceType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--创建简单类型结束-->
+  <!--创建复杂类型开始-->
+  <xs:complexType name="BookType">
+    <xs:all>
+      <xs:element name="Price" type="PriceType" />
+      <xs:element name="PublishYear" type="PublishYearType" />
+      <xs:element name="Publisher" type="PublisherType" />
+      <xs:element name="Series" type="SeriesType" />
+      <xs:element name="Author" type="AuthorType" />
+      <xs:element name="Title" type="TitleType" />
+    </xs:all>
+    <xs:attribute name="ISBN" type="xs:string" use="required" />
+  </xs:complexType>
+  <!--创建复杂类型结束-->
+  <!--创建元素开始-->
+  <xs:element name="Books">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Book" type="BookType" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--创建元素结束-->
+</xs:schema>

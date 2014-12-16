@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Records"
+    targetNamespace="http://tempuri.org/Records.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Records.xsd"
+    xmlns:mstns="http://tempuri.org/Records.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <!--创建简单类型开始-->
+  <xs:simpleType name="ReaderIDType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="BookIDType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="BorrowDateType">
+    <xs:restriction base="xs:date">
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ReturnDateType">
+    <xs:restriction base="xs:date">
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RemarkType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!--创建简单类型结束-->
+  <!--创建复杂类型开始-->
+  <xs:complexType name="RecordType">
+    <xs:all>
+      <xs:element name="Remark" type="RemarkType" />
+      <xs:element name="ReturnDate" type="ReturnDateType" />
+      <xs:element name="BorrowDate" type="BorrowDateType" />
+      <xs:element name="BookID" type="BookIDType" />
+      <xs:element name="ReaderID" type="ReaderIDType" />
+    </xs:all>
+    <xs:attribute name="ID" type="xs:int" use="required" />
+  </xs:complexType>
+  <!--创建复杂类型结束-->
+  <!--创建元素开始-->
+  <xs:element name="Records">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Record" type="RecordType" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--创建元素结束-->
+</xs:schema>

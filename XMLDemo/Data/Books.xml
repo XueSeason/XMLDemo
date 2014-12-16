@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Books>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.w3school.com.cn Books.xsd">
   <Book ISBN="9780300164800">
     <Title>Using Swift with Cocoa and Objective-C</Title>
     <Author>苹果公司</Author>
