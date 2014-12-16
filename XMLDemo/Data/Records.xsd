@@ -34,7 +34,7 @@
 
   <xs:simpleType name="RemarkType">
     <xs:restriction base="xs:string">
-      <xs:minLength value="1" />
+      <xs:minLength value="0" />
       <xs:maxLength value="255" />
     </xs:restriction>
   </xs:simpleType>
@@ -42,13 +42,13 @@
   <!--创建简单类型结束-->
   <!--创建复杂类型开始-->
   <xs:complexType name="RecordType">
-    <xs:all>
-      <xs:element name="Remark" type="RemarkType" />
-      <xs:element name="ReturnDate" type="ReturnDateType" />
-      <xs:element name="BorrowDate" type="BorrowDateType" />
-      <xs:element name="BookID" type="BookIDType" />
+    <xs:sequence>
       <xs:element name="ReaderID" type="ReaderIDType" />
-    </xs:all>
+      <xs:element name="BookID" type="BookIDType" />
+      <xs:element name="BorrowDate" type="BorrowDateType" />
+      <xs:element name="ReturnDate" type="ReturnDateType" minOccurs="0"/>
+      <xs:element name="Remark" type="RemarkType" />
+    </xs:sequence>
     <xs:attribute name="ID" type="xs:int" use="required" />
   </xs:complexType>
   <!--创建复杂类型结束-->

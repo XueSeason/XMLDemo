@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Records>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Records xmlns="http://tempuri.org/Records.xsd">
   <Record ID="1">
     <ReaderID>0001</ReaderID>
     <BookID>9780300164800</BookID>
     <BorrowDate>2014-12-16</BorrowDate>
-    <ReturnDate></ReturnDate>
     <Remark></Remark>
   </Record>
 </Records>

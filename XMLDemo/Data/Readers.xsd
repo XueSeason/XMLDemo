@@ -71,24 +71,25 @@
   <!--创建简单类型结束-->
   <!--创建复杂类型开始-->
   <xs:complexType name="AddressType">
-    <xs:all>
-      <xs:element name="No" type="NoType" />
-      <xs:element name="Street" type="StreetType" />
-      <xs:element name="District" type="DistrictType" />
+    <xs:sequence>
       <xs:element name="City" type="CityType" />
-    </xs:all>
+      <xs:element name="District" type="DistrictType" />
+      <xs:element name="Street" type="StreetType" />
+      <xs:element name="No" type="NoType" />   
+    </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="ReaderType">
-    <xs:all>
-      <xs:element name="Email" type="EmailType" />
-      <xs:element name="Phone" type="PhoneType" />
-      <xs:element name="Address" type="AddressType" />
-      <xs:element name="Status" type="StatusType" />
+    <xs:sequence>
       <xs:element name="Name" type="NameType" />
-    </xs:all>
+      <xs:element name="Status" type="StatusType" />
+      <xs:element name="Address" type="AddressType" />
+      <xs:element name="Phone" type="PhoneType" />
+      <xs:element name="Email" type="EmailType" />    
+    </xs:sequence>
     <xs:attribute name="ID" type="xs:string" use="required" />
-  </xs:complexType> 
+  
+</xs:complexType> 
   <!--创建复杂类型结束-->
   <!--创建元素开始-->
   <xs:element name="Readers">

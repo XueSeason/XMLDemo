@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Readers>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Readers xmlns="http://tempuri.org/Readers.xsd">
   <Reader ID="0001">
     <Name>薛纪杰</Name>
     <Status>学生</Status>

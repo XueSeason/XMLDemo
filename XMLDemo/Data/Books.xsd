@@ -38,7 +38,7 @@
   </xs:simpleType>
 
   <xs:simpleType name="PublishYearType">
-    <xs:restriction base="xs:date">
+    <xs:restriction base="xs:gYear">
     </xs:restriction>
   </xs:simpleType>
   
@@ -51,16 +51,17 @@
   <!--创建简单类型结束-->
   <!--创建复杂类型开始-->
   <xs:complexType name="BookType">
-    <xs:all>
-      <xs:element name="Price" type="PriceType" />
-      <xs:element name="PublishYear" type="PublishYearType" />
-      <xs:element name="Publisher" type="PublisherType" />
-      <xs:element name="Series" type="SeriesType" />
-      <xs:element name="Author" type="AuthorType" />
+    <xs:sequence>
       <xs:element name="Title" type="TitleType" />
-    </xs:all>
+      <xs:element name="Author" type="AuthorType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Series" type="SeriesType" />
+      <xs:element name="Publisher" type="PublisherType" />
+      <xs:element name="PublishYear" type="PublishYearType" />
+      <xs:element name="Price" type="PriceType" />
+    </xs:sequence>
     <xs:attribute name="ISBN" type="xs:string" use="required" />
-  </xs:complexType>
+  
+</xs:complexType>
   <!--创建复杂类型结束-->
   <!--创建元素开始-->
   <xs:element name="Books">
