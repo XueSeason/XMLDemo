@@ -60,10 +60,40 @@
     <Content Include="Data\Records.xml" />
     <Content Include="Data\Books.xml" />
     <Content Include="Data\Readers.xml" />
+    <Content Include="Statics\css\Books.css" />
+    <Content Include="Statics\images\MUJI 無印良品.jpg" />
+    <Content Include="Statics\images\Using Swift with Cocoa and Objective-C.jpg" />
+    <Content Include="Statics\images\影响力.jpg" />
+    <Content Include="Statics\images\红楼梦.jpg" />
+    <Content Include="Statics\images\追风筝的人.jpg" />
     <Content Include="Web.config" />
+    <Content Include="WebForms\BooksHandler.aspx" />
+    <Content Include="WebForms\ReaderHandler.aspx" />
+    <Content Include="WebForms\RecordsHandler.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForms\BooksHandler.aspx.cs">
+      <DependentUpon>BooksHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\BooksHandler.aspx.designer.cs">
+      <DependentUpon>BooksHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\ReaderHandler.aspx.cs">
+      <DependentUpon>ReaderHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\ReaderHandler.aspx.designer.cs">
+      <DependentUpon>ReaderHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\RecordsHandler.aspx.cs">
+      <DependentUpon>RecordsHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\RecordsHandler.aspx.designer.cs">
+      <DependentUpon>RecordsHandler.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Books.xsd">
@@ -83,7 +113,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="网页窗口\" />
+    <Folder Include="Statics\js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

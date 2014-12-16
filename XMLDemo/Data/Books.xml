@@ -3,7 +3,6 @@
   <Book ISBN="9780300164800">
     <Title>Using Swift with Cocoa and Objective-C</Title>
     <Author>苹果公司</Author>
-    <Author>123</Author>
     <Series>IT类</Series>
     <Publisher>Apple Inc.</Publisher>
     <PublishYear>2014</PublishYear>
@@ -32,5 +31,13 @@
     <Publisher>广西师范大学出版社</Publisher>
     <PublishYear>2010</PublishYear>
     <Price>150.00元</Price>
+  </Book>
+  <Book ISBN="9787020002207">
+    <Title>红楼梦</Title>
+    <Author>曹雪芹,高鹗</Author>
+    <Series>人文类</Series>
+    <Publisher>人民文学出版社</Publisher>
+    <PublishYear>1996</PublishYear>
+    <Price>59.70元</Price>
   </Book>
 </Books>
