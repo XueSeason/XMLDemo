@@ -1,0 +1,35 @@
+﻿body {
+}
+
+div.item {
+    width:25%;
+    height: 230px;
+    border:groove;
+    margin: 0 auto;
+    background-color: #808080;
+}
+
+div.item .content {
+    float:left;
+}
+
+div.item .content .textBox {
+    margin-left:20px;
+}
+
+div.item .content .textBox .title {
+    width:30%;
+    display: block;
+    float: left;
+}
+
+div.item .content .textBox .box {
+    width:60%;
+    display: block;
+}
+
+div.item .image {
+    float:left;
+    margin-left: 3px;
+    margin-top: 3px;
+}
