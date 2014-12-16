@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Readers>
+  <Reader ID="0001">
+    <Name>薛纪杰</Name>
+    <Status>学生</Status>
+    <Address>
+      <City>宁波</City>
+      <District>镇海</District>
+      <Street>天圣路</Street>
+      <No>137</No>
+    </Address>
+    <Phone>15757892314</Phone>
+    <Email>xueseason@iCloud.com</Email>
+  </Reader>
+  <Reader ID="0002">
+    <Name>薛纪杰</Name>
+    <Status>教师</Status>
+    <Address>
+      <City>宁波</City>
+      <District>镇海</District>
+      <Street>天圣路</Street>
+      <No>137</No>
+    </Address>
+    <Phone>15757892314</Phone>
+    <Email>xueseason@iCloud.com</Email>
+  </Reader>
+</Readers>

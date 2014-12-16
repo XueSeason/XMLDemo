@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Books>
+  <Book ISBN="9780300164800">
+    <Title>Using Swift with Cocoa and Objective-C</Title>
+    <Author>苹果公司</Author>
+    <Series>IT类</Series>
+    <Publisher>Apple Inc.</Publisher>
+    <PublishYear>2014-6-2</PublishYear>
+    <Price>免费</Price>
+  </Book>
+  <Book ISBN="9787208061644">
+    <Title>追风筝的人</Title>
+    <Author>[美] 卡勒德·胡赛尼</Author>
+    <Series>人文类</Series>
+    <Publisher>上海人民出版社</Publisher>
+    <PublishYear>2006-5</PublishYear>
+    <Price>29.00元</Price>
+  </Book>
+  <Book ISBN="9787300072487">
+    <Title>影响力</Title>
+    <Author>[美] 罗伯特·西奥迪尼</Author>
+    <Series>社科类</Series>
+    <Publisher>中国人民大学出版社</Publisher>
+    <PublishYear>2006-5</PublishYear>
+    <Price>45.00元</Price>
+  </Book>
+  <Book ISBN="9780300164800">
+    <Title>MUJI 無印良品</Title>
+    <Author>[日]良品計畫株式會社</Author>
+    <Series>艺术类</Series>
+    <Publisher>广西师范大学出版社</Publisher>
+    <PublishYear>2010-11</PublishYear>
+    <Price>150.00元</Price>
+  </Book>
+</Books>
