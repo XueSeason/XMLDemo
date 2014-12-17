@@ -1,7 +1,7 @@
-XMLDemo
+XMLDemo version -1.0 功能完整版
 =======
 
-本人 XML 期末大作业，使用 C# 对 XML 的简单操作 Demo
+使用 C# 对 XML 的简单操作 Demo
 
 -后台采用 ASP.NET 框架。
 
