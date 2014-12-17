@@ -13,13 +13,25 @@
     <Email>xueseason@iCloud.com</Email>
   </Reader>
   <Reader ID="0002">
-    <Name>薛纪杰</Name>
+    <Name>华罗庚</Name>
     <Status>教师</Status>
     <Address>
       <City>宁波</City>
       <District>镇海</District>
       <Street>天圣路</Street>
       <No>137</No>
+    </Address>
+    <Phone>15757892314</Phone>
+    <Email>xueseason@iCloud.com</Email>
+  </Reader>
+  <Reader ID="0003">
+    <Name>奥巴马1</Name>
+    <Status>教师</Status>
+    <Address>
+      <City>宁波1</City>
+      <District>镇海1</District>
+      <Street>天圣路1</Street>
+      <No>1371</No>
     </Address>
     <Phone>15757892314</Phone>
     <Email>xueseason@iCloud.com</Email>

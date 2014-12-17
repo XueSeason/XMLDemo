@@ -2,8 +2,8 @@
 }
 
 div.item {
-    width:340px;
-    height: 230px;
+    width:260px;
+    height: 280px;
     border:groove;
     margin: 0 auto;
     background-color: #808080;
@@ -28,8 +28,3 @@ div.item .content .textBox .box {
     display: block;
 }
 
-div.item .image {
-    float:left;
-    margin-left: 3px;
-    margin-top: 3px;
-}

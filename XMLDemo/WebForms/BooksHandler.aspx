@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BooksHandler.aspx.cs" Inherits="XMLDemo.网页窗口.BooksHandler" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BooksHandler.aspx.cs" Inherits="XMLDemo.WebForms.BooksHandler" %>
 
 <!DOCTYPE html>
 

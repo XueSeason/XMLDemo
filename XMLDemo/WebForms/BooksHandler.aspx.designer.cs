@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace XMLDemo.网页窗口 {
+namespace XMLDemo.WebForms {
     
     
     public partial class BooksHandler {

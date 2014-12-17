@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 
-namespace XMLDemo.网页窗口
+namespace XMLDemo.WebForms
 {
     public partial class BooksHandler : System.Web.UI.Page
     {
@@ -141,7 +141,6 @@ namespace XMLDemo.网页窗口
             {
                 Response.Write("<script>alert('注意ISBN是否唯一或者其他非法输入');</script>");
             }
-
         }
 
         protected void pre_Click(object sender, EventArgs e)
