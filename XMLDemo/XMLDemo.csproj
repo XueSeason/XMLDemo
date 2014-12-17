@@ -61,6 +61,7 @@
     <Content Include="Data\Books.xml" />
     <Content Include="Data\Readers.xml" />
     <Content Include="Statics\css\Books.css" />
+    <Content Include="Statics\css\Query.css" />
     <Content Include="Statics\css\Readers.css" />
     <Content Include="Statics\css\Records.css" />
     <Content Include="Statics\images\MUJI 無印良品.jpg" />
@@ -68,10 +69,14 @@
     <Content Include="Statics\images\影响力.jpg" />
     <Content Include="Statics\images\红楼梦.jpg" />
     <Content Include="Statics\images\追风筝的人.jpg" />
+    <Content Include="Statics\xslt\BorrowRecords.xsl" />
+    <Content Include="Statics\xslt\Records.xml" />
     <Content Include="Web.config" />
     <Content Include="WebForms\BooksHandler.aspx" />
+    <Content Include="WebForms\BorrowRecordsQuery.aspx" />
     <Content Include="WebForms\ReaderHandler.aspx" />
     <Content Include="WebForms\RecordsHandler.aspx" />
+    <Content Include="WebForms\WebService\BorrowRecordsQuery.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +86,13 @@
     </Compile>
     <Compile Include="WebForms\BooksHandler.aspx.designer.cs">
       <DependentUpon>BooksHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\BorrowRecordsQuery.aspx.cs">
+      <DependentUpon>BorrowRecordsQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\BorrowRecordsQuery.aspx.designer.cs">
+      <DependentUpon>BorrowRecordsQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\ReaderHandler.aspx.cs">
       <DependentUpon>ReaderHandler.aspx</DependentUpon>
@@ -95,6 +107,10 @@
     </Compile>
     <Compile Include="WebForms\RecordsHandler.aspx.designer.cs">
       <DependentUpon>RecordsHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\WebService\BorrowRecordsQuery.asmx.cs">
+      <DependentUpon>BorrowRecordsQuery.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -114,9 +130,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Statics\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
