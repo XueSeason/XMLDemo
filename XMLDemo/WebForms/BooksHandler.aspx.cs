@@ -50,7 +50,7 @@ namespace XMLDemo.WebForms
             if(isValid)
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(Server.MapPath("..//Data//Books.xml"));
+                doc.Load(Server.MapPath("../Data/Books.xml"));
 
                 foreach (XmlNode book in doc.DocumentElement.ChildNodes[index].ChildNodes)
                 {
@@ -68,7 +68,7 @@ namespace XMLDemo.WebForms
                         book.InnerText = price.Text;
                 }
  
-                doc.Save(Server.MapPath("..//Data//Books.xml"));
+                doc.Save(Server.MapPath("../Data/Books.xml"));
                 Response.Write("<script>alert('修改成功');</script>");
             }
             else
@@ -81,11 +81,11 @@ namespace XMLDemo.WebForms
         {
             loadContent();
             XmlDocument doc = new XmlDocument();
-            doc.Load(Server.MapPath("..//Data//Books.xml"));
+            doc.Load(Server.MapPath("../Data/Books.xml"));
             //XmlNode book = doc.SelectSingleNode("/xx:Books/xx:Book[@ISBN=" + isbn.Text + "]");
             XmlNode book = doc.DocumentElement.ChildNodes[index];
             book.ParentNode.RemoveChild(book);
-            doc.Save(Server.MapPath("..//Data//Books.xml"));
+            doc.Save(Server.MapPath("../Data/Books.xml"));
             Response.Write("<script>alert('删除成功');</script>");
             index = 0;
             booksNumber = 0;
@@ -105,7 +105,7 @@ namespace XMLDemo.WebForms
             if(isValid)
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(Server.MapPath("..//Data//Books.xml"));
+                doc.Load(Server.MapPath("../Data/Books.xml"));
                 // 创建 book 节点开始
                 XmlNode bookNode = doc.CreateElement("Book", doc.DocumentElement.NamespaceURI);
 
@@ -134,7 +134,7 @@ namespace XMLDemo.WebForms
                 bookNode.Attributes.Append(isbnAttr);
                 // 创建 book 节点结束
                 doc.DocumentElement.AppendChild(bookNode);
-                doc.Save(Server.MapPath("..//Data//Books.xml"));
+                doc.Save(Server.MapPath("../Data/Books.xml"));
                 Response.Write("<script>alert('添加成功');</script>");
             }
             else
@@ -184,7 +184,7 @@ namespace XMLDemo.WebForms
         private void loadContent()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(Server.MapPath("..//Data//Books.xml"));
+            doc.Load(Server.MapPath("../Data/Books.xml"));
             foreach(XmlNode books in doc.DocumentElement.ChildNodes)
             {
                 isbnArr.Add(books.Attributes["ISBN"].Value);

@@ -52,7 +52,7 @@ namespace XMLDemo.WebForms
             if (isValid)
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(Server.MapPath("..//Data//Readers.xml"));
+                doc.Load(Server.MapPath("../Data/Readers.xml"));
 
                 foreach (XmlNode reader in doc.DocumentElement.ChildNodes[index].ChildNodes)
                 {
@@ -81,7 +81,7 @@ namespace XMLDemo.WebForms
 
                 }
 
-                doc.Save(Server.MapPath("..//Data//Readers.xml"));
+                doc.Save(Server.MapPath("../Data/Readers.xml"));
                 Response.Write("<script>alert('修改成功');</script>");
             }
             else
@@ -94,11 +94,11 @@ namespace XMLDemo.WebForms
         {
             loadContent();
             XmlDocument doc = new XmlDocument();
-            doc.Load(Server.MapPath("..//Data//Readers.xml"));
+            doc.Load(Server.MapPath("../Data/Readers.xml"));
             //XmlNode book = doc.SelectSingleNode("/xx:Books/xx:Book[@ISBN=" + isbn.Text + "]");
             XmlNode reader = doc.DocumentElement.ChildNodes[index];
             reader.ParentNode.RemoveChild(reader);
-            doc.Save(Server.MapPath("..//Data//Readers.xml"));
+            doc.Save(Server.MapPath("../Data/Readers.xml"));
             Response.Write("<script>alert('删除成功');</script>");
             index = 0;
             readersNumber = 0;
@@ -118,7 +118,7 @@ namespace XMLDemo.WebForms
             if (isValid)
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(Server.MapPath("..//Data//Readers.xml"));
+                doc.Load(Server.MapPath("../Data/Readers.xml"));
                 // 创建 book 节点开始
                 XmlNode readerNode = doc.CreateElement("Reader", doc.DocumentElement.NamespaceURI);
 
@@ -157,7 +157,7 @@ namespace XMLDemo.WebForms
                 readerNode.Attributes.Append(idAttr);
                 // 创建 book 节点结束
                 doc.DocumentElement.AppendChild(readerNode);
-                doc.Save(Server.MapPath("..//Data//Readers.xml"));
+                doc.Save(Server.MapPath("../Data/Readers.xml"));
                 Response.Write("<script>alert('添加成功');</script>");
             }
             else
@@ -207,7 +207,7 @@ namespace XMLDemo.WebForms
         private void loadContent()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(Server.MapPath("..//Data//Readers.xml"));
+            doc.Load(Server.MapPath("../Data/Readers.xml"));
             foreach (XmlNode readers in doc.DocumentElement.ChildNodes)
             {
                 readerIdArr.Add(readers.Attributes["ID"].Value);
