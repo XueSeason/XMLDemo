@@ -69,14 +69,14 @@
     <Content Include="Statics\images\影响力.jpg" />
     <Content Include="Statics\images\红楼梦.jpg" />
     <Content Include="Statics\images\追风筝的人.jpg" />
-    <Content Include="Statics\xslt\BorrowRecords.xsl" />
-    <Content Include="Statics\xslt\Records.xml" />
+    <Content Include="WebForms\XMLFile\BorrowRecords.xsl" />
     <Content Include="Web.config" />
     <Content Include="WebForms\BooksHandler.aspx" />
     <Content Include="WebForms\BorrowRecordsQuery.aspx" />
     <Content Include="WebForms\ReaderHandler.aspx" />
     <Content Include="WebForms\RecordsHandler.aspx" />
     <Content Include="WebForms\WebService\BorrowRecordsQuery.asmx" />
+    <Content Include="WebForms\XMLFile\QueryResult.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -5,3 +5,14 @@ div.search {
     width: 500px;
     margin: 0 auto;
 }
+
+.result{
+    display:block;
+    width: 800px;
+    height:600px;
+    margin: 0 auto;
+}
+
+.searchPanel {
+    margin-top:10px;
+}

@@ -11,8 +11,32 @@
   <Record ID="2">
     <ReaderID>0002</ReaderID>
     <BookID>9787208061644</BookID>
-    <BorrowDate>2014-12-16</BorrowDate>
-    <ReturnDate>2014-12-31</ReturnDate>
+    <BorrowDate>2014-07-08</BorrowDate>
+    <ReturnDate>2014-09-30</ReturnDate>
     <Remark>11</Remark>
+  </Record>
+  <Record ID="3">
+    <ReaderID>0001</ReaderID>
+    <BookID>9787020002207</BookID>
+    <BorrowDate>2014-05-10</BorrowDate>
+    <ReturnDate>2014-06-30</ReturnDate>
+    <Remark>
+    </Remark>
+  </Record>
+  <Record ID="4">
+    <ReaderID>0001</ReaderID>
+    <BookID>9787300072487</BookID>
+    <BorrowDate>2014-01-10</BorrowDate>
+    <ReturnDate>2014-05-12</ReturnDate>
+    <Remark>
+    </Remark>
+  </Record>
+  <Record ID="5">
+    <ReaderID>0002</ReaderID>
+    <BookID>9787300072487</BookID>
+    <BorrowDate>2014-02-10</BorrowDate>
+    <ReturnDate>2014-05-12</ReturnDate>
+    <Remark>
+    </Remark>
   </Record>
 </Records>

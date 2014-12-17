@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Records>
+  <Record>
+    <ReaderID>0001</ReaderID>
+    <ReaderName>薛纪杰</ReaderName>
+    <BookID>9780300164800</BookID>
+    <BookTitle>Using Swift with Cocoa and Objective-C</BookTitle>
+    <BorrowDate>2014-12-16</BorrowDate>
+    <ReturnDate>2014-12-31</ReturnDate>
+  </Record>
+  <Record>
+    <ReaderID>0001</ReaderID>
+    <ReaderName>薛纪杰</ReaderName>
+    <BookID>9787020002207</BookID>
+    <BookTitle>红楼梦</BookTitle>
+    <BorrowDate>2014-05-10</BorrowDate>
+    <ReturnDate>2014-06-30</ReturnDate>
+  </Record>
+  <Record>
+    <ReaderID>0001</ReaderID>
+    <ReaderName>薛纪杰</ReaderName>
+    <BookID>9787300072487</BookID>
+    <BookTitle>影响力</BookTitle>
+    <BorrowDate>2014-01-10</BorrowDate>
+    <ReturnDate>2014-05-12</ReturnDate>
+  </Record>
+</Records>
