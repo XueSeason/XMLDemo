@@ -4,6 +4,8 @@
     <ReaderID>0001</ReaderID>
     <BookID>9780300164800</BookID>
     <BorrowDate>2014-12-16</BorrowDate>
-    <Remark></Remark>
+    <ReturnDate>2014-12-31</ReturnDate>
+    <Remark>
+    </Remark>
   </Record>
 </Records>

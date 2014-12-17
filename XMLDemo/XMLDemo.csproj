@@ -62,6 +62,7 @@
     <Content Include="Data\Readers.xml" />
     <Content Include="Statics\css\Books.css" />
     <Content Include="Statics\css\Readers.css" />
+    <Content Include="Statics\css\Records.css" />
     <Content Include="Statics\images\MUJI 無印良品.jpg" />
     <Content Include="Statics\images\Using Swift with Cocoa and Objective-C.jpg" />
     <Content Include="Statics\images\影响力.jpg" />
