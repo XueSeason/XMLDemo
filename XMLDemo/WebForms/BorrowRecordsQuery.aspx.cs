@@ -64,7 +64,7 @@ namespace XMLDemo.WebForms
             }
         }
 
-        private void createXMLFile()
+        public void createXMLFile()
         {
             XmlDocument doc = new XmlDocument();   
             //建立Xml的定义声明   
@@ -104,7 +104,7 @@ namespace XMLDemo.WebForms
             doc.Save(Server.MapPath("./XMLFile/QueryResult.xml"));
         }
 
-        private void query(string content, string key)
+        public void query(string content, string key)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(Server.MapPath("../Data/Records.xml"));
@@ -147,8 +147,6 @@ namespace XMLDemo.WebForms
             {
                 nameArr.Add(doc.SelectSingleNode("//rd:Reader[@ID='" + readerId + "']/rd:Name", nsmgr).InnerText);
             }
-
-            //Response.Write("<script>alert('查询结束！');</script>");
         }
     }
 }
