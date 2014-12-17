@@ -19,6 +19,8 @@ namespace XMLDemo.WebForms
         List<string> publishYearArr = new List<string>();
         List<string> priceArr = new List<string>();
 
+        List<string> seriesSet = new List<string>();
+
         int booksNumber = 0;
         static int index = 0;
 
@@ -170,7 +172,7 @@ namespace XMLDemo.WebForms
             title.Text = titleArr[i];
             author.Text = authorArr[i];
             series.Items.Clear();
-            foreach(string serie in seriesArr)
+            foreach(string serie in seriesSet)
             {
                 series.Items.Add(serie);    
             }
@@ -199,7 +201,13 @@ namespace XMLDemo.WebForms
                     if (book.Name == "Author")
                         authorArr.Add(book.InnerText);
                     if (book.Name == "Series")
+                    {
                         seriesArr.Add(book.InnerText);
+                        if (!seriesSet.Contains(book.InnerText))
+                        {
+                            seriesSet.Add(book.InnerText);
+                        }
+                    }
                     if (book.Name == "Publisher")
                         publisherArr.Add(book.InnerText);
                     if (book.Name == "PublishYear")

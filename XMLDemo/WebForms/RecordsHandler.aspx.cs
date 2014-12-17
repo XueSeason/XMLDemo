@@ -17,6 +17,9 @@ namespace XMLDemo.WebForms
         List<string> returnDateArr = new List<string>();
         List<string> remarkArr = new List<string>();
 
+        List<string> readerIdSet = new List<string>();
+        List<string> bookIdSet = new List<string>();
+
         int recordsNumber = 0;
         static int index = 0;
 
@@ -163,14 +166,14 @@ namespace XMLDemo.WebForms
             recordId.Text = recordIdArr[i];
 
             readerId.Items.Clear();
-            foreach (string reader in readerIdArr)
+            foreach (string reader in readerIdSet)
             {
                 readerId.Items.Add(reader);
             }
             readerId.SelectedValue = readerIdArr[i];
 
             bookId.Items.Clear();
-            foreach (string book in bookIdArr)
+            foreach (string book in bookIdSet)
             {
                 bookId.Items.Add(book);
             }
@@ -194,7 +197,13 @@ namespace XMLDemo.WebForms
                     if (record.Name == "ReaderID")
                         readerIdArr.Add(record.InnerText);
                     if (record.Name == "BookID")
+                    {
                         bookIdArr.Add(record.InnerText);
+                        if (!bookIdSet.Contains(record.InnerText))
+                        {
+                            bookIdSet.Add(record.InnerText);
+                        }
+                    }
                     if (record.Name == "BorrowDate")
                         borrowDateArr.Add(record.InnerText);
                     if (record.Name == "ReturnDate")
@@ -204,7 +213,30 @@ namespace XMLDemo.WebForms
                 }
                 recordsNumber++;
             }
+            LoadDropList();
+        }
 
+        private void LoadDropList()
+        {
+            XmlDocument readerDoc = new XmlDocument();
+            readerDoc.Load(Server.MapPath("../Data/Readers.xml"));
+            foreach (XmlNode readers in readerDoc.DocumentElement.ChildNodes)
+            {
+                if (!readerIdSet.Contains(readers.Attributes["ID"].Value))
+                {
+                    readerIdSet.Add(readers.Attributes["ID"].Value);
+                }
+            }
+
+            XmlDocument bookDoc = new XmlDocument();
+            bookDoc.Load(Server.MapPath("../Data/Books.xml"));
+            foreach (XmlNode books in bookDoc.DocumentElement.ChildNodes)
+            {
+                if (!bookIdSet.Contains(books.Attributes["ISBN"].Value))
+                {
+                    bookIdSet.Add(books.Attributes["ISBN"].Value);
+                }
+            }
         }
     }
 }

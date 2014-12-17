@@ -8,4 +8,11 @@
     <Remark>
     </Remark>
   </Record>
+  <Record ID="2">
+    <ReaderID>0002</ReaderID>
+    <BookID>9787208061644</BookID>
+    <BorrowDate>2014-12-16</BorrowDate>
+    <ReturnDate>2014-12-31</ReturnDate>
+    <Remark>11</Remark>
+  </Record>
 </Records>

@@ -21,6 +21,8 @@ namespace XMLDemo.WebForms
         List<string> phoneArr = new List<string>();
         List<string> emailArr = new List<string>();
 
+        List<string> statusSet = new List<string>();
+
         int readersNumber = 0;
         static int index = 0;
 
@@ -191,7 +193,7 @@ namespace XMLDemo.WebForms
             readerId.Text = readerIdArr[i];
             name.Text = nameArr[i];
             status.Items.Clear();
-            foreach (string serie in statusArr)
+            foreach (string serie in statusSet)
             {
                 status.Items.Add(serie);
             }
@@ -217,7 +219,13 @@ namespace XMLDemo.WebForms
                     if (reader.Name == "Name")
                         nameArr.Add(reader.InnerText);
                     if (reader.Name == "Status")
+                    {
                         statusArr.Add(reader.InnerText);
+                        if (!statusSet.Contains(reader.InnerText))
+                        {
+                            statusSet.Add(reader.InnerText);
+                        }
+                    }
                     if (reader.Name == "Address")
                     {
                         foreach(XmlNode node in reader.ChildNodes)
